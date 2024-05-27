@@ -4,9 +4,9 @@ services:
     volumes:
       - db_data:/var/lib/postgresql/data
     env:
-      - POSTGRES_DB
-      - POSTGRES_USER
-      - POSTGRES_PASSWORD
+      - POSTGRES_DB=tw_deuni
+      - POSTGRES_USER=zabavalabs
+      - POSTGRES_PASSWORD=z@b@v@commun1ty
     ports:
       - "5432:5432"
     networks:
