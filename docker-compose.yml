@@ -21,11 +21,10 @@ services:
 
   thirdweb:
     image: thirdweb/engine:latest
-    env:
-      - POSTGRES_CONNECTION_URL
-      - THIRDWEB_API_SECRET_KEY
-      - ENCRYPTION_PASSWORD
-      - ADMIN_WALLET_ADDRESS
+    environment:
+      - POSTGRES_CONNECTION_URL=postgresql://postgres:postgres@host.docker.internal:5432/postgres?sslmode=disable&connection_limit=10
+    env_file:
+      - ./.env
     ports:
       - "3005:3005"
     depends_on:
