@@ -3,7 +3,7 @@ services:
     image: postgres:latest
     volumes:
       - db_data:/var/lib/postgresql/data
-    env:
+    environment:
       - POSTGRES_DB=tw_deuni
       - POSTGRES_USER=zabavalabs
       - POSTGRES_PASSWORD=z@b@v@commun1ty
